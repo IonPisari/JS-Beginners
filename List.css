@@ -1,0 +1,12 @@
+body{
+    font-family: Arial;
+    background-color: #333;
+    color:white;
+}
+
+select{
+    background-color: #444;
+    padding: 10px;
+    color: white;
+    font-size: 150%;
+}
