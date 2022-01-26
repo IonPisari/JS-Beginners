@@ -1,0 +1,17 @@
+.change{
+    color: lightblue;
+    font-size: 100px;
+    border: 10px solid black;
+}
+#author{
+    font-size: 40px;
+    text-transform: uppercase;
+    color: lightslategrey;
+}
+.button{
+    font-size: 20px;
+    margin: 4px;
+    padding: 5px;
+    background-color: rgba(44, 19, 44, 0.133);
+    color: rgb(65, 34, 34);
+}
