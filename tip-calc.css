@@ -1,0 +1,68 @@
+body{
+    background-color: rgba(65, 124, 73, 0.753);
+    color: rgba(175, 156, 130, 0.89);
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+.container {
+    /* border :1px dotted red; */
+    margin: auto 30%;
+    text-align: center;
+}
+@media (min-width: 700px) {
+    .container {
+        width: 650px;
+    }
+}
+.logo{
+    background-color: rgba(61, 31, 31, 0.836);
+    border-radius: 30px;
+    margin: 10px  15%;
+}
+.box{
+    /* border: 1px solid yellow; */
+    margin: 0  20%;
+    background-color: rgba(61, 31, 31, 0.836);
+    border-radius: 20px;
+}
+.steps{
+    margin-bottom: 30px;
+}
+.subtitle{
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+}
+#amount{
+    border-radius: 10px;
+    background-color: rgba(218, 228, 224, 0.808);
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+#services{
+    border-radius: 10px;
+    /* background-color: rgba(218, 228, 224, 0.808); */
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    text-align: left;
+}
+#persons{
+    border-radius: 10px;
+    background-color: rgba(218, 228, 224, 0.808);
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+#calculate{
+    border-radius: 10px;
+    background-color: rgba(218, 228, 224, 0.808);
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+.result{
+    font-size: 30px;
+}

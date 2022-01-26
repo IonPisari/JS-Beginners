@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM | Tip Calculate</title>
+    <link rel="stylesheet" href="tip-calc.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="logo">TIP CALCULATOR</h1>
+        <div class="box">
+            <div class="amount steps">
+                <p class="subtitle">The total bill amount:</p>
+                <input type="number" id="amount" placeholder="Amount need to  be paid.">
+            </div>
+            <div class="service steps">
+                <p class="subtitle">The Service Level:</p>
+                <form id="services">
+                    <input type="radio" name= "tip" id="tip5" value="0.30"> <label for="tip5">Outstanding-30%</label> <br>
+                    <input type="radio" name= "tip" id="tip4" value="0.20"> <label for="tip4">Good-20%</label> <br>
+                    <input type="radio" name= "tip" id="tip3" value="0.15"> <label for="tip3">OKish-15%</label><br>
+                    <input type="radio" name= "tip" id="tip2" value="0.10"> <label for="tip2">Bad - 10%</label><br>
+                    <input type="radio" name= "tip" id="tip1" value="0"> <label for="tip1">Never coming back - 0% </label>
+                </form>
+            </div>
+            <div class="person steps">
+                <p class="subtitle">The number of person that are spliting:</p>
+                <input type="number" id="persons" placeholder="Num of people split"><br><br>
+                <button id="calculate">Calculate</button>
+            </div>
+            <br>
+            <div class="result">
+                <span id="total">0</span>$
+            </div>
+        </div>
+    </div>
+    <script src="tip-calc.js"></script>
+</body>
+</html>
