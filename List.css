@@ -3,10 +3,16 @@ body{
     background-color: #333;
     color:white;
 }
+.box {
+    border: 1px solid red;
+    width: 300px;
+}
 
 select{
     background-color: #444;
     padding: 10px;
     color: white;
     font-size: 150%;
+    display: block;
+    width: 100%;
 }
