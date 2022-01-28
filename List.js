@@ -10,8 +10,7 @@ let loadCountriesNames = data => {
     }
     return countriesNames
 }
-let cntNames = loadCountriesNames(data);
-console.log(cntNames)
+
 
 let loadStatesNames = (data, countryName) =>{
     
@@ -21,31 +20,29 @@ let loadStatesNames = (data, countryName) =>{
             for (let y = 0; y < data[i].states.length; y++) {
                 statesNames.push(data[i].states[y].name); 
                 
-                // console.log(data[i].states[y])
-                // break;
+                
             }
+            break;
         }
      
     }
     return statesNames
 }
-// let stNames = loadStatesNames(data, stateName)
-// console.log(stNames)
 
 
-let loadCitiesNames = (data, countryName, statesName) => {
+let loadCitiesNames = (data,  stateName) => {
     
     let citiesNames = []
     for (let i = 0; i < data.length; i++) {
-        if(countryName === data[i].name){
+        if(data[i].name){
             for (let y = 0; y < data[i].states.length; y++) {
-                if (statesName === data[i].states[y].name) {
+                if (stateName === data[i].states[y].name) {
                     for(let j = 0; j < data[i].states[y].cities.length; j++) {
                         citiesNames.push(data[i].states[y].cities[j].name); 
                         
-                        // console.log(data[i].states[y].cities[j])
-                        // break;
+                        
                     }
+                    break;
                 }
             }
             
@@ -55,20 +52,18 @@ let loadCitiesNames = (data, countryName, statesName) => {
     return citiesNames
 }
 
-//problema se incepe de aici 
-//nu am scris codul corect
+
 let countrySelected = () => {
     let countryName = event.target.value
     let statesNames = loadStatesNames(data, countryName)
     renderStatesList(statesNames);
-    console.log(statesNames)
+    console.log(statesNames);
 }
 let statesSelected = () => {
-    let countryName = event.target.value
-    let statesNames = loadStatesNames(data, countryName)
-    let citiesNames = loadCitiesNames(data, countryName, statesNames)
-    renderCitiesList(citiesNames);
-    console.log(citiesNames)
+    let stateName = event.target.value
+    let citiesName = loadCitiesNames(data, stateName)
+    renderCitiesList(citiesName);
+    console.log(citiesName)
 }
 
 let renderCitiesList = list => {
@@ -77,8 +72,8 @@ let renderCitiesList = list => {
     let html = `<select>`
 
     for (let i = 0; i < list.length; i++) {
-        const ctNames = list[i];
-        html += `<option>${ctNames}</option>`
+        const ctName = list[i];
+        html += `<option>${ctName}</option>`
     }
 
     html += `</select>`
@@ -91,8 +86,8 @@ let renderStatesList = list => {
     let html = `<select onchange="statesSelected()">`;
 
     for (let i = 0; i < list.length; i++) {
-        const stNames = list[i];
-        html += `<option>${stNames}</option>`
+        const stName = list[i];
+        html += `<option>${stName}</option>`
     }
 
     html += `</select>`
@@ -106,8 +101,8 @@ let renderCountriesList = list => {
     let html = `<select onchange="countrySelected()">`;
 
     for (let i = 0; i < list.length; i++) {
-        const cntNames = list[i];
-        html += `<option>${cntNames}</option>`
+        const cntName = list[i];
+        html += `<option>${cntName}</option>`
     }
 
     html += `</select>`
@@ -115,6 +110,6 @@ let renderCountriesList = list => {
     wrapper.innerHTML = html
 }
 
-// let cntNames = loadCountriesNames(data);
+let cntNames = loadCountriesNames(data);
 renderCountriesList(cntNames)
-// console.log(cntNames)
+console.log(cntNames)
